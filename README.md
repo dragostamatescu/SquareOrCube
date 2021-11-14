@@ -2,4 +2,4 @@ SquareOrCube App
 
  A Flutter App that checks if a number is square or cube.
  
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/65079196/141702217-9fe8c95b-3ab3-45c4-9441-264a6ecda1db.gif)
+ ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/65079196/141702284-0a815784-7bfe-4ea3-b413-f9c3a1b3b664.gif)
