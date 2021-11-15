@@ -107,8 +107,7 @@ class MyHomePageState extends State<MyHomePage> {
             switch (result) {
               case 0:
                 {
-                  dialogText =
-                      'Number ${controller.text} is neither Square nor Cube';
+                  dialogText = 'Number ${controller.text} is neither Square nor Cube';
                 }
                 break;
               case 1:
@@ -123,8 +122,7 @@ class MyHomePageState extends State<MyHomePage> {
                 break;
               case 3:
                 {
-                  dialogText =
-                      'Number ${controller.text} is both Square and Cube';
+                  dialogText = 'Number ${controller.text} is both Square and Cube';
                 }
                 break;
             }
