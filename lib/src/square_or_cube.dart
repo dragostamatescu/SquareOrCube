@@ -20,10 +20,10 @@ class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  MyHomePageState createState() => MyHomePageState();
 }
 
-int _checksquareOrCube(int value) {
+int _checkSquareOrCube(int value) {
   bool isCube = false, isSquare = false;
 
   if (value == 1) {
@@ -37,7 +37,7 @@ int _checksquareOrCube(int value) {
         isSquare = true;
       }
     }
-     if ((value / i) % i == 0) {
+    if ((value / i) % i == 0) {
       if ((value / i) / i == i) {
         isCube = true;
       }
@@ -56,7 +56,7 @@ int _checksquareOrCube(int value) {
   }
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class MyHomePageState extends State<MyHomePage> {
   final TextEditingController controller = TextEditingController();
 
   @override
@@ -67,7 +67,6 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: const Align(
             child: Text('Number Shapes'),
-            alignment: Alignment.center,
           ),
         ),
         body: Column(
@@ -75,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
               padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
               child: const Text(
-                "Please input a number to see if it is\nSquare or Cube.",
+                'Please input a number to see if it is\nSquare or Cube.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 22,
@@ -87,8 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
               padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
               child: TextField(
                 controller: controller,
-                keyboardType:
-                    const TextInputType.numberWithOptions(decimal: false),
+                keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   suffix: IconButton(
                     iconSize: 23,
@@ -103,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
         floatingActionButton: FloatingActionButton(
           child: const Icon(Icons.check),
           onPressed: () {
-            int result = _checksquareOrCube(int.parse(controller.text));
+            final int result = _checkSquareOrCube(int.parse(controller.text));
             String dialogText = '';
 
             switch (result) {
